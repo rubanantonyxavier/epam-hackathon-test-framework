@@ -5,6 +5,7 @@ Feature: NI - DAQ Report Generation And Validation
 
   @contract
   Scenario: Verify NI - DAQ Report Generation using Contract User
+#    Test commit
     Given open NI URL
     When login in NI Application with Contract User
     Then verify NI Subject Search page is displayed
