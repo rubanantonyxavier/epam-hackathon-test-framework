@@ -25,7 +25,7 @@ public class CommonSteps extends BaseSteps {
         );
     }
 
-    @Given("^open (NI|CRM) URL$")
+    @Given("^open (NI|CRM|IPL) URL$")
     public void openUrl(String ui) {
         getDriver().get(commonPage.getUrl(ui));
     }

@@ -10,4 +10,5 @@ import lombok.ToString;
 public class Urls {
     private String niUI;
     private String crmUI;
+    private String iplUI;
 }
