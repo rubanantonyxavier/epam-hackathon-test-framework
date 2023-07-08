@@ -15,6 +15,7 @@ public class CommonPage extends BasePage {
         return switch (ui) {
             case "NI" -> Config.getEnvConfig().getUrls().getNiUI();
             case "CRM" -> Config.getEnvConfig().getUrls().getCrmUI();
+            case "IPL" -> Config.getEnvConfig().getUrls().getIplUI();
             default -> throw new RuntimeException(ui + " - The provided Application URL is not available");
         };
     }
