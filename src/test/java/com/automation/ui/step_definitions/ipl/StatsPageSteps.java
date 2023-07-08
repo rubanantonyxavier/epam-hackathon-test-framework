@@ -1,5 +1,6 @@
 package com.automation.ui.step_definitions.ipl;
 
+import com.automation.ui.apiUtils.ServiceUtils;
 import com.automation.ui.cucumber.TestContext;
 import com.automation.ui.pages.ipl.StatsPage;
 import com.automation.ui.step_definitions.common.BaseSteps;
@@ -35,20 +36,20 @@ public class StatsPageSteps extends BaseSteps {
     }
 
     @When("User clicks 'View All' button")
-    public void userClicksButton(String buttonText) {
+    public void userClicksButton() {
         statsPage.clickElement("View All Button");
     }
 
     @And("User capture the Stats of Players")
     public void userCaptureTheStatsOfPlayers() {
         List<Integer> numbers = RandomUtil.getEvenNumbersFromFibonacci(40);
-
     }
 
     @And("Select a player based on the response received from API")
     public void selectAPlayerBasedOnTheResponseReceivedFromAPI() {
-        String playerName = "Shubman Gill";
+        String playerName = ServiceUtils.sendPostRequest("http://10.244.218.130:8080/batters",statsPage.getPlayerJsonString());
         getTempVariables().setPlayerName(playerName);
+        System.out.println(playerName);
         statsPage.selectPlayerByName(getTempVariables().getPlayerName());
     }
 }
