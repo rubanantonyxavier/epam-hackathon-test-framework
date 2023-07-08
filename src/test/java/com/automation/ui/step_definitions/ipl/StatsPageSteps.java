@@ -38,5 +38,7 @@ public class StatsPageSteps extends BaseSteps {
 
     @And("Select a player based on the response received from API")
     public void selectAPlayerBasedOnTheResponseReceivedFromAPI() {
+        String playerName = "Shubman Gill";
+        statsPage.selectPlayerByName(playerName);
     }
 }

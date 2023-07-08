@@ -15,4 +15,9 @@ public class StatsPage extends BasePage {
     @FindBy(xpath = "//div[@class='customSelecBox statsTypeFilter']")
     private WebElement typeFilterDropdown;
 
+    private static final String PLAYER_NAME_XPATH = "//div[text()='<replace_value>']";
+
+    public void selectPlayerByName(String playerName) {
+        replaceValueInXpathAndGetWebElement(PLAYER_NAME_XPATH, playerName).click();
+    }
 }
