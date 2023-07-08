@@ -11,5 +11,4 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//a[@data-element_text='STATS']")
     private WebElement statsHeaderTab;
 
-
 }
