@@ -36,6 +36,7 @@ ext {
     reflectionsVersion = '0.10.2'
     allureVersion = '2.19.0'
     snakeyamlVersion = '1.33'
+    jacksonVersion = '2.12.0'
     availableEnvs = ['qa', 'dev', 'uat']
     currentEnv = getEnv()
 }
@@ -53,6 +54,7 @@ dependencies {
     implementation group: 'org.reflections', name: 'reflections', version: reflectionsVersion
     implementation group: 'io.qameta.allure', name: 'allure-cucumber7-jvm', version: allureVersion
     implementation group: 'org.yaml', name: 'snakeyaml', version: snakeyamlVersion
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jacksonVersion
 }
 
 configurations {
