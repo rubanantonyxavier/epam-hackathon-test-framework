@@ -1,10 +1,19 @@
 package com.automation.ui.step_definitions.ipl;
 
+import com.automation.ui.cucumber.TestContext;
+import com.automation.ui.pages.ipl.StatsPage;
+import com.automation.ui.step_definitions.common.BaseSteps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class StatsPageSteps {
+public class StatsPageSteps extends BaseSteps {
+
+    StatsPage statsPage = getPageObject(StatsPage.class);
+
+    public StatsPageSteps(TestContext testContext) {
+        super(testContext);
+    }
 
     @Then("STATS page is opened")
     public void statsPageIsOpened() {

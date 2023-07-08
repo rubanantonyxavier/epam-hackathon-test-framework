@@ -3,7 +3,7 @@ Feature: Task1
   @Task1
   Scenario: Task1
     Given open IPL URL
-    Then IPL page is opened
+    Then IPL Home page is opened
     When Navigate to STATS in Header
     Then STATS page is opened
     When User clicks "BATTERS" radio button in StatsType dropdown and select "ARAMCO ORANGE CAP" option
