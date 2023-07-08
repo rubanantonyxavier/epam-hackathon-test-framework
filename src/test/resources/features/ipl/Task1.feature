@@ -10,5 +10,5 @@ Feature: Task1
     Then "ARAMCO ORANGE CAP" is displayed in StatsType dropdown
     When User clicks "View All" button
     And User capture the Stats of Players
-    And Select a player based on the respnse received from API
+    And Select a player based on the response received from API
     Then Selected Player details page is displayed
