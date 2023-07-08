@@ -17,7 +17,7 @@ public class PlayerDetailsPageSteps extends BaseSteps {
 
     @Then("Selected Player details page is displayed")
     public void selectedPlayerDetailsPageIsDisplayed() {
-        String playerName = "Shubman Gill";
-        assertThat(playerDetailsPage.isPlayerNameDisplayed(playerName)).isTrue();
+        assertThat(playerDetailsPage.isPlayerNameDisplayed(getTempVariables().getPlayerName())).isTrue();
+        takeScreenshot();
     }
 }

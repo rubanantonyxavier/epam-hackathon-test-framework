@@ -9,4 +9,5 @@ public class TempVariables {
     private String loanNumber;
     private String address;
     private String userInUse;
+    private String playerName;
 }
