@@ -28,6 +28,7 @@ java {
 }
 
 ext {
+    assuredVersion = '5.0.1'
     seleniumVersion = '3.141.59'
     webDriverManagerVersion = '5.2.0'
     cucumberVersion = '7.8.1'
@@ -41,6 +42,10 @@ ext {
 }
 
 dependencies {
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.32'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'
+    implementation group: 'io.rest-assured', name: 'rest-assured', version: assuredVersion
+    implementation group: 'io.qameta.allure', name: 'allure-rest-assured', version: allureVersion
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: seleniumVersion
     implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: webDriverManagerVersion
     implementation group: 'io.cucumber', name: 'cucumber-java', version: cucumberVersion
